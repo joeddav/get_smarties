@@ -29,12 +29,12 @@ class Smarties:
             raise Exception('You are missing a column key, should be:' + str(result_lookup['normal']))
 
         encoding_lookup = result_lookup['encoding']
-
+        row = df.index
         with_dummies = [df.drop(encoding_lookup.keys(), axis=1)]   #drop columns to encode
 
         for key in encoding_lookup:
             value_name = df[key].values[0]
-            print value_name
+            #print value_name
             #Check to see if encoding took place
             number_of_cols = len(encoding_lookup[key])
             dummy_mat = np.zeros((1, number_of_cols), dtype=np.uint8)
@@ -43,7 +43,7 @@ class Smarties:
             if len(indices) > 0:
                 dummy_mat[0][indices[0]] = 1
 
-            with_dummies.append(DataFrame(dummy_mat, index=None, columns=encoding_lookup[key]))
+            with_dummies.append(DataFrame(dummy_mat, index=row, columns=encoding_lookup[key]))
         return pd.concat(with_dummies, axis=1)
 
 
