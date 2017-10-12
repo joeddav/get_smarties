@@ -12,7 +12,7 @@ feature, your resulting datasets will be different shapes.
 For example, say we have a datset with a 'gender' with two possible values: Male and Female.
 
 <table>
-<tr><td>id</td><td>...</td><td>gender</td></tr>
+<tr><td></td><td>...</td><td>gender</td></tr>
 <tr><td>1</td><td>...</td><td>Male</td></tr>
 <tr><td>2</td><td>...</td><td>Female</td></tr>
 <tr><td>3</td><td>...</td><td>Male</td></tr>
@@ -21,7 +21,7 @@ For example, say we have a datset with a 'gender' with two possible values: Male
 The `pd.get_dummies` function would give you:
 
 <table>
-<tr><td>id</td><td>...</td><td>gender_Male</td><td>gender_Female</td></tr>
+<tr><td></td><td>...</td><td>gender_Male</td><td>gender_Female</td></tr>
 <tr><td>1</td><td>...</td><td>1</td><td>0</td></tr>
 <tr><td>2</td><td>...</td><td>0</td><td>1</td></tr>
 <tr><td>3</td><td>...</td><td>1</td><td>0</td></tr>
@@ -31,7 +31,7 @@ But now, say we have another instance and do some machine learning voodoo to pre
 Saw we predict a male. `get_dummies` would give:
 
 <table>
-<tr><td>id</td><td>...</td><td>gender_Male</td></tr>
+<tr><td></td><td>...</td><td>gender_Male</td></tr>
 <tr><td>1</td><td>...</td><td>1</td></tr>
 </table>
 
@@ -45,7 +45,7 @@ See more discussion of this issue at [this thread](https://github.com/pandas-dev
 
 `get_smarties` allows you to easily generate dummy variables while persisting the possible values
 under each category for you. You can use conventional `fit_transform` and `transform` methods
-and solve this problem with no additional effort, like so:
+and solve this problem with virtually no additional effort, like so:
 
 ```python
 from get_smarties import Smarties
