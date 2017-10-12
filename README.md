@@ -28,7 +28,7 @@ The `pd.get_dummies` function would give you:
 </table>
 
 But now, say we have another instance and do some machine learning voodoo to predict their gender.
-Saw we predict a male. `get_dummies` would give:
+Say we predict a male. `get_dummies` would give:
 
 <table>
 <tr><td></td><td>...</td><td>gender_Male</td></tr>
