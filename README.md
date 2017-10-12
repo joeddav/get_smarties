@@ -61,3 +61,9 @@ Y = gs.transform(prediction)
 And vuala! Your `Y` dataframe will have the same number of columns as `X`.
 
 See short sample notebook at [demo.ipnyb](demo.ipynb).
+
+### Setup
+
+With pip, simply run
+
+	pip install git+https://github.com/joeddav/get_smarties.git
