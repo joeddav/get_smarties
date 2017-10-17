@@ -60,8 +60,8 @@ Y = gs.transform(prediction)
 
 ### Pipelines
 
-`get_smarties` even has fit/transform capabilities, meaning you can inject it directly
-into an sklearn pipeline:
+Because `get_smarties` has fit/transform capabilities, you can even inject your dummy
+variable creation directly sklearn pipelines:
 
 ```python
 training_pipeline = Pipeline([
