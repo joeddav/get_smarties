@@ -58,9 +58,21 @@ X = gs.fit_transform(data)
 Y = gs.transform(prediction)
 ```
 
-And vuala! Your `Y` dataframe will have the same number of columns as `X`.
+### Pipelines
 
-See short sample notebook at [demo.ipnyb](demo.ipynb).
+`get_smarties` even has fit/transform capabilities, meaning you can inject it directly
+into an sklearn pipeline:
+
+```python
+training_pipeline = Pipeline([
+    ('smarties', Smarties()),
+    ('clf', MultinomialNB()),
+])
+
+training_pipeline.fit(data, labels)
+```
+
+See a working example with k-fold cross validation at [kfold-pipeline-demo.ipynb](kfold-pipeline-demo.ipynb).
 
 ### Setup
 

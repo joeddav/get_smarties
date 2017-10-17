@@ -47,7 +47,7 @@ class Smarties:
         return pd.concat(with_dummies, axis=1)
 
 
-    def fit_transform(self, data, prefix=None, prefix_sep='_', dummy_na=False, columns=None, sparse=False, drop_first=False):
+    def fit_transform(self, data, y=None, prefix=None, prefix_sep='_', dummy_na=False, columns=None, sparse=False, drop_first=False):
         """
         Convert categorical variable into dummy/indicator variables
         """
