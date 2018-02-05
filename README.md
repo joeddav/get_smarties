@@ -78,4 +78,4 @@ See a working example with k-fold cross validation at [kfold-pipeline-demo.ipynb
 
 With pip, simply run
 
-	pip install git+https://github.com/joeddav/get_smarties.git
+	pip install -e git+https://github.com/joeddav/get_smarties.git#egg=get_smarties
