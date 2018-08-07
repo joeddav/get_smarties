@@ -33,5 +33,5 @@ setup(name='get_smarties',
     ],
     keywords='pandas, dummy, fit/transform',
 
-    install_requires=['pandas>=0.20.3', 'numpy'],
+    install_requires=['pandas>=0.23.1', 'numpy'],
 )

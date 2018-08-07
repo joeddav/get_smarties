@@ -4,7 +4,7 @@ from pandas import compat
 from pandas.core.series import Series
 from pandas.core.frame import DataFrame
 from pandas.core.indexing import is_list_like
-from pandas.core.categorical import _factorize_from_iterable
+from pandas.core.arrays.categorical import _factorize_from_iterable
 
 class Smarties:
     def __init__(self, main_lookup=None):
