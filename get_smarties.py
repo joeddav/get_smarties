@@ -6,7 +6,7 @@ from pandas.core.frame import DataFrame
 from pandas.core.indexing import is_list_like
 from pandas.core.arrays.categorical import _factorize_from_iterable
 
-class Smarties:
+class Smarties(object):
     def __init__(self, main_lookup=None):
         self.main_lookup=main_lookup
         return None
